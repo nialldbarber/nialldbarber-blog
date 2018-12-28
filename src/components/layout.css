@@ -1,0 +1,79 @@
+:root {
+	--black: #1e272d;
+	--offWhite: #ededed;
+	--green: #6cc;
+	--orange: #f89b0e;
+	--pink: #f95584;
+	--maxWidth: 1100px;
+	--bs: 0 12px 24px 0 rgba(0, 0, 0, 0.09);
+	--transition: .25s cubic-bezier(.895, .03, .685, .22);
+}
+
+@import url('https://fonts.googleapis.com/css?family=Questrial');
+html {
+	box-sizing: border-box;
+	font-size: 10px;
+}
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+body {
+	position: relative;
+	margin: 0;
+	padding: 0 0 5rem 0;
+	font-size: 1.7rem;
+	line-height: 2;
+	-webkit-font-smoothing: antialiased;
+	font-family: 'Questrial', sans-serif;
+	color: var(--black);
+	background: var(--offWhite);
+}
+
+code,
+pre {
+	font-family: source-code-pro, Menlo, Monaco, Consolas, Courier New, monospace;
+	font-size: 1.5rem;
+}
+
+pre {
+	background: rgb(40, 44, 52);
+	color: #fff;
+	padding: 2.5rem;
+	margin: 3rem 0;
+	border-radius: 3px;
+}
+
+@media (max-width: 509px) {
+	body {
+		padding: 0;
+	}
+}
+
+a {
+	text-decoration: none;
+	color: var(--black);
+}
+
+@media (max-width: 509px) {
+	.bar {
+		width: 100vw;
+		height: 8.6rem;
+		position: fixed;
+		top: 0;
+		background: var(--black);
+		z-index: 999;
+		box-shadow: var(--bs);
+	}
+}
+.grid {
+	display: flex;
+	margin-top: 6rem;
+}
+@media (max-width: 629px) {
+	.grid {
+		flex-wrap: wrap;
+	}
+}
