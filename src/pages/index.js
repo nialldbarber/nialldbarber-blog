@@ -7,10 +7,10 @@ const IndexPage = ({ data }) => {
 	return (
 		<Layout>
 			{data.graphCmsData.posts.map((blog, i) => (
-				<div>
+				<article>
 					<h2>{blog.title}</h2>
 					<Markdown source={blog.description} escapeHtml={false} />
-				</div>
+				</article>
 			))}
 		</Layout>
 	);
@@ -21,7 +21,7 @@ export default IndexPage;
 export const query = graphql`
 	{
 		graphCmsData {
-			posts(orderBy: createdAt_DESC) {
+			posts(orderBy: createdAt_ASC) {
 				id
 				status
 				title
